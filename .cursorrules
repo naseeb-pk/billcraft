@@ -1,0 +1,57 @@
+You are helping build Billcraft — a freelancer invoice generator and manager web app.
+
+## Project Context
+- Read PROJECT_SPEC.md at the project root for the full product specification
+- This includes database schema, screen specs, design tokens, folder structure, and build sequence
+- Always reference the spec before generating code — don't invent features or patterns not in the spec
+
+## Tech Stack
+- Next.js 14+ (App Router) with TypeScript
+- Tailwind CSS + shadcn/ui for components
+- Supabase for database, auth, and file storage
+- @react-pdf/renderer for invoice PDFs
+- Resend for sending emails
+- Deployed on Vercel
+
+## Code Style Rules
+- Use TypeScript strictly — no `any` types
+- Use server components by default, add "use client" only when needed (interactive components)
+- Use Supabase server client in server components, browser client in client components
+- All database queries should go through server actions or API routes, never directly in client components
+- Use the app router conventions: page.tsx for pages, layout.tsx for layouts, loading.tsx for loading states
+- Component files use PascalCase (e.g., MetricCards.tsx)
+- Utility files use camelCase (e.g., formatCurrency.ts)
+- Follow the folder structure defined in PROJECT_SPEC.md Section 8
+
+## UI/Design Rules
+- Use shadcn/ui components as the base — don't build custom components when shadcn has one
+- Follow the design tokens in PROJECT_SPEC.md Section 10 for colors, spacing, and typography
+- Brand color is #534AB7 (purple) — used for primary buttons, links, and accents
+- Status badge colors: Draft=gray, Sent=blue, Viewed=amber, Overdue=red, Paid=green
+- Keep the UI minimal and clean — freelancers want speed, not decoration
+- Mobile responsiveness is required but desktop-first for now
+
+## Database Rules
+- All tables have Row Level Security (RLS) enabled
+- Every query must respect user_id scoping — never fetch data without filtering by the authenticated user
+- Use Supabase's generated types from the database schema
+- Payment details are stored as JSONB for flexibility
+
+## When Asked to Build Something
+1. Check if it's defined in PROJECT_SPEC.md
+2. Follow the spec exactly for structure and behavior
+3. Use the design tokens for styling
+4. Handle loading states and errors
+5. Make it work first, make it pretty second
+
+## When You Don't Know Something
+- Say so clearly rather than guessing
+- Suggest checking the relevant documentation (Next.js docs, Supabase docs, shadcn/ui docs)
+- Never generate code that you're uncertain about without flagging the uncertainty
+
+## Common Patterns in This Project
+- Currency formatting: Always use Intl.NumberFormat for currency display
+- Date formatting: Use date-fns library, display short format like "Mar 14"
+- Invoice numbers: Auto-generated as "{prefix}-{number}" padded to 4 digits (e.g., INV-0042)
+- Empty states: Every list/table should have a meaningful empty state with a CTA
+- Toast notifications: Use sonner (via shadcn) for success/error feedback
