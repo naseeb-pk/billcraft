@@ -40,7 +40,7 @@ export default function SignupPage() {
       <div className="w-full max-w-sm rounded-2xl bg-white px-8 py-10 shadow-sm">
 
         <div className="mb-6 flex flex-col items-center gap-2">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFD230] text-zinc-900 text-xl font-bold">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-900 text-white text-xl font-bold">
             B
           </div>
           <h1 className="text-lg font-semibold text-zinc-900">Create your account</h1>
@@ -56,19 +56,19 @@ export default function SignupPage() {
           <div className="flex flex-col gap-1.5">
             <label htmlFor="full_name" className="text-sm font-medium text-zinc-700">Full name</label>
             <input id="full_name" name="full_name" type="text" required autoComplete="name"
-              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
+              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-zinc-400 focus:ring-2 focus:ring-zinc-100" />
           </div>
 
           <div className="flex flex-col gap-1.5">
             <label htmlFor="email" className="text-sm font-medium text-zinc-700">Email</label>
             <input id="email" name="email" type="email" required autoComplete="email"
-              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
+              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-zinc-400 focus:ring-2 focus:ring-zinc-100" />
           </div>
 
           <div className="flex flex-col gap-1.5">
             <label htmlFor="password" className="text-sm font-medium text-zinc-700">Password</label>
             <input id="password" name="password" type="password" required minLength={6} autoComplete="new-password"
-              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
+              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-zinc-400 focus:ring-2 focus:ring-zinc-100" />
           </div>
 
           {error && <p className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600">{error}</p>}

@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#FFD230] text-zinc-900 text-sm font-bold">
+          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-zinc-900 text-white text-sm font-bold">
             B
           </div>
           <span className="text-base font-semibold text-zinc-900">Billcraft</span>
@@ -41,7 +41,7 @@ export default function Navbar() {
           <div className="relative">
             <button
               onClick={() => setOpen((v) => !v)}
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100 text-zinc-800 text-sm font-semibold hover:bg-yellow-200 transition-colors"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-700 text-sm font-semibold hover:bg-zinc-200 transition-colors"
             >
               N
             </button>
