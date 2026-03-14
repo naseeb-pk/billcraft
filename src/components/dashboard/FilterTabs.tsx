@@ -20,13 +20,13 @@ export default function FilterTabs({
           onClick={() => onChange(tab)}
           className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
             active === tab
-              ? 'bg-indigo-600 text-white'
+              ? 'bg-[#FFD230] text-zinc-900'
               : 'text-zinc-500 hover:bg-zinc-100 hover:text-zinc-700'
           }`}
         >
           {tab}
           <span className={`rounded-full px-1.5 py-0.5 text-xs ${
-            active === tab ? 'bg-indigo-500 text-white' : 'bg-zinc-100 text-zinc-500'
+            active === tab ? 'bg-[#e6bc1a] text-zinc-900' : 'bg-zinc-100 text-zinc-500'
           }`}>
             {counts[tab]}
           </span>

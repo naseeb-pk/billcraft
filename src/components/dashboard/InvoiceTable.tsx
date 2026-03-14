@@ -52,7 +52,7 @@ export default function InvoiceTable({ invoices }: { invoices: Invoice[] }) {
         <p className="font-medium text-zinc-900">No invoices yet</p>
         <p className="mt-1 text-sm text-zinc-500">Create your first invoice to get started</p>
         <Link href="/invoices/new"
-          className="mt-4 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors">
+          className="mt-4 rounded-lg bg-[#FFD230] px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-[#e6bc1a] transition-colors">
           + Create Invoice
         </Link>
       </div>
@@ -77,7 +77,7 @@ export default function InvoiceTable({ invoices }: { invoices: Invoice[] }) {
           {invoices.map((inv) => (
             <tr key={inv.id} className="hover:bg-zinc-50 transition-colors">
               <td className="px-4 py-3.5">
-                <Link href={`/invoices/${inv.id}`} className="font-medium text-indigo-600 hover:underline">
+                <Link href={`/invoices/${inv.id}`} className="font-medium text-zinc-900 hover:underline">
                   {inv.invoice_number}
                 </Link>
               </td>

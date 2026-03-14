@@ -79,7 +79,7 @@ export default function OnboardingPage() {
 
         {/* Header */}
         <div className="mb-8 flex flex-col items-center gap-2">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-white text-xl font-bold">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFD230] text-zinc-900 text-xl font-bold">
             B
           </div>
           <h1 className="text-lg font-semibold text-zinc-900">Set up your account</h1>
@@ -91,7 +91,7 @@ export default function OnboardingPage() {
           {[1, 2, 3].map((s) => (
             <div
               key={s}
-              className={`h-1 flex-1 rounded-full transition-colors ${s <= step ? 'bg-indigo-600' : 'bg-zinc-200'}`}
+              className={`h-1 flex-1 rounded-full transition-colors ${s <= step ? 'bg-[#FFD230]' : 'bg-zinc-200'}`}
             />
           ))}
         </div>
@@ -108,7 +108,7 @@ export default function OnboardingPage() {
                 value={businessName}
                 onChange={(e) => setBusinessName(e.target.value)}
                 placeholder="e.g. Naseeb Design Co."
-                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100"
               />
             </div>
 
@@ -121,7 +121,7 @@ export default function OnboardingPage() {
                 onChange={(e) => setBusinessAddress(e.target.value)}
                 rows={3}
                 placeholder="123 Main St, City, Country"
-                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 resize-none"
+                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100 resize-none"
               />
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function OnboardingPage() {
               <select
                 value={paymentTerms}
                 onChange={(e) => setPaymentTerms(Number(e.target.value))}
-                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 bg-white"
+                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100 bg-white"
               >
                 {PAYMENT_TERMS_OPTIONS.map((o) => (
                   <option key={o.value} value={o.value}>{o.label}</option>
@@ -157,7 +157,7 @@ export default function OnboardingPage() {
                 value={taxRate}
                 onChange={(e) => setTaxRate(e.target.value)}
                 placeholder="e.g. 18"
-                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100"
               />
             </div>
 
@@ -170,7 +170,7 @@ export default function OnboardingPage() {
                 onChange={(e) => setDefaultNotes(e.target.value)}
                 rows={3}
                 placeholder="e.g. Thank you for your business!"
-                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 resize-none"
+                className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100 resize-none"
               />
             </div>
           </div>
@@ -187,13 +187,13 @@ export default function OnboardingPage() {
                 <label className="text-sm font-medium text-zinc-700">Bank name</label>
                 <input type="text" value={bankName} onChange={(e) => setBankName(e.target.value)}
                   placeholder="e.g. HDFC Bank"
-                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100" />
+                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-medium text-zinc-700">Account holder</label>
                 <input type="text" value={accountHolder} onChange={(e) => setAccountHolder(e.target.value)}
                   placeholder="Your name"
-                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100" />
+                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
               </div>
             </div>
 
@@ -202,13 +202,13 @@ export default function OnboardingPage() {
                 <label className="text-sm font-medium text-zinc-700">Account number</label>
                 <input type="text" value={accountNumber} onChange={(e) => setAccountNumber(e.target.value)}
                   placeholder="1234567890"
-                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100" />
+                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-medium text-zinc-700">IFSC / Routing</label>
                 <input type="text" value={ifscCode} onChange={(e) => setIfscCode(e.target.value)}
                   placeholder="HDFC0001234"
-                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100" />
+                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
               </div>
             </div>
 
@@ -217,13 +217,13 @@ export default function OnboardingPage() {
                 <label className="text-sm font-medium text-zinc-700">UPI ID</label>
                 <input type="text" value={upiId} onChange={(e) => setUpiId(e.target.value)}
                   placeholder="name@upi"
-                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100" />
+                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-medium text-zinc-700">PayPal email</label>
                 <input type="email" value={paypalEmail} onChange={(e) => setPaypalEmail(e.target.value)}
                   placeholder="you@paypal.com"
-                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100" />
+                  className="rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100" />
               </div>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function OnboardingPage() {
             <button
               onClick={step === 3 ? handleFinish : () => setStep((s) => (s + 1) as Step)}
               disabled={saving}
-              className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 disabled:opacity-60 transition-colors"
+              className="rounded-lg bg-[#FFD230] px-5 py-2.5 text-sm font-semibold text-zinc-900 hover:bg-[#e6bc1a] disabled:opacity-60 transition-colors"
             >
               {step === 3 ? (saving ? 'Saving…' : 'Finish setup') : 'Continue'}
             </button>

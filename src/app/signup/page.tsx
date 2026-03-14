@@ -26,13 +26,13 @@ export default function SignupPage() {
 
         {/* Logo */}
         <div className="mb-6 flex flex-col items-center gap-2">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-white text-xl font-bold">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFD230] text-zinc-900 text-xl font-bold">
             B
           </div>
           <h1 className="text-lg font-semibold text-zinc-900">Create your account</h1>
           <p className="text-sm text-zinc-500">
             Already have an account?{' '}
-            <Link href="/login" className="font-medium text-indigo-600 hover:underline">
+            <Link href="/login" className="font-medium text-zinc-900 hover:underline">
               Log in
             </Link>
           </p>
@@ -49,7 +49,7 @@ export default function SignupPage() {
               type="text"
               required
               autoComplete="name"
-              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100"
             />
           </div>
 
@@ -63,7 +63,7 @@ export default function SignupPage() {
               type="email"
               required
               autoComplete="email"
-              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100"
             />
           </div>
 
@@ -78,7 +78,7 @@ export default function SignupPage() {
               required
               minLength={6}
               autoComplete="new-password"
-              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100"
             />
           </div>
 
@@ -89,7 +89,7 @@ export default function SignupPage() {
           <button
             type="submit"
             disabled={loading}
-            className="mt-1 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 disabled:opacity-60 transition-colors"
+            className="mt-1 rounded-lg bg-[#FFD230] px-4 py-2.5 text-sm font-semibold text-zinc-900 hover:bg-[#e6bc1a] disabled:opacity-60 transition-colors"
           >
             {loading ? 'Creating account…' : 'Create account'}
           </button>

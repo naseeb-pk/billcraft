@@ -100,7 +100,7 @@ export default function DashboardPage() {
                       placeholder="Search invoices…"
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
-                      className="rounded-lg border border-zinc-200 bg-white pl-8 pr-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 w-48"
+                      className="rounded-lg border border-zinc-200 bg-white pl-8 pr-3 py-2 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#FFD230] focus:ring-2 focus:ring-yellow-100 w-48"
                     />
                   </div>
                   <FilterTabs active={activeTab} counts={counts} onChange={setActiveTab} />
